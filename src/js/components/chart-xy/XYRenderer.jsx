@@ -305,8 +305,11 @@ var XYChart = React.createClass({
 
 	componentWillReceiveProps: function(nextProps) {
 		var yOffset;
-		if (nextProps.hasTitle) {
+		if (nextProps.hasTitle && nextProps.hasLinhafina) {
+			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle*2;
+		} else if (nextProps.hasTitle && nextProps.hasLinhafina == false) {
 			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle;
+
 		} else {
 			yOffset = nextProps.displayConfig.margin.top;
 		}
@@ -414,12 +417,15 @@ var XYLabels = React.createClass({
 		// Determine how far down vertically the labels should be placed, depending
 		// on presence (or not) of a title
 		var yOffset;
-		if (nextProps.hasTitle) {
+	
+		if (nextProps.hasTitle && nextProps.hasLinhafina) {
+			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle*1.5;
+		} else if (nextProps.hasTitle && nextProps.hasLinhafina == false) {
 			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle;
+
 		} else {
 			yOffset = nextProps.displayConfig.margin.top;
 		}
-
 		/*
 		* We use this XYLabels component's state to save locations of undragged
 		* labels. Dragged labels are saved to the parent store so that they can be
@@ -833,7 +839,9 @@ function computePadding(props, chartHeight) {
 	var displayConfig = props.displayConfig;
 	var _top = (props.labelYMax * props.chartAreaDimensions.height) + displayConfig.afterLegend;
 
-	if (props.hasTitle) {
+	if (props.hasTitle && props.hasLinhafina) {
+		_top += displayConfig.afterTitle*1.5;
+	} else if (props.hasTitle && props.hasLinhafina == false) {
 		_top += displayConfig.afterTitle;
 	}
 

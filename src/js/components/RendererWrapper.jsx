@@ -285,7 +285,7 @@ var RendererWrapper = React.createClass({
 					<SvgText
 						text={metadata.linhafina}
 						key="linhafina"
-						translate={[translate.left, translate.top]}
+						translate={[translate.left, translate.top*3]}
 						align="top"
 						className="svg-text-linhafina"
 					/>
