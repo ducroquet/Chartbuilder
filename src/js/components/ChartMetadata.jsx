@@ -42,8 +42,12 @@ var chart_sizes = [
 var text_input_values = [
 	{ name: "title", content: "Title" },
 	{ name: "linhafina", content: "Linha Fina" },
-	{ name: "credit", content: "Credit" },
-	{ name: "source", content: "Source" }
+	{ name: "credit", content: "Fonte" },
+	
+	/**
+	* Retirado para que ninguém possa alterar a assinatura do nexo
+	*{ name: "source", content: "Source" }
+	*/
 ];
 
 /**
