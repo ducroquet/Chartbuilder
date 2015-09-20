@@ -1,6 +1,8 @@
 $em_size = 20px
 $em_size_small = 14px
 $em_size_large = 36px
+$em_size_legenda = 18px
+
 
 div.renderer-wrapper
   font-smoothing antialiased
@@ -35,7 +37,7 @@ svg
   font-size $em_size
   .axis
     .tick
-      font-family $font-sans-light
+      font-family $font-sans
       &[data-anchor="middle"]
         text
           text-anchor middle
@@ -43,6 +45,7 @@ svg
         fill $color-chart-axis-text
         shape-rendering crispEdges
         text-anchor middle
+        font-size $em_size_legenda
       &:first-child
         text
           text-anchor middle
@@ -68,15 +71,17 @@ svg
     &[data-scale="time"]
       .tick:not([data-anchor="middle"])
         text
-          text-anchor start
+          text-anchor middle
+          fill $color-body-text
       .tick:first-child
         text
-          text-anchor start
+          text-anchor middle
+          fill $color-body-text
 
   .concealer-label
     font-family $font-sans-light
     text
-      fill $color-chart-axis-text
+      fill $color-body-text
     rect
       fill $color-bg
 
@@ -104,19 +109,20 @@ svg
   line.no-label-tick
     fill none
     stroke $color-chart-gridline
-    stroke-width 1px
+    stroke-width px
     shape-rendering crispEdges
 
 .svg-text
-  font-family $font-sans-light
-  font-size $em_size
   &.svg-text-credit
+    font-family $font-sans-light
     font-size $em_size*0.6
-    fill $color-chart-meta
+    fill $color-body-text
     text-anchor start
   &.svg-text-source
-    font-size $em_size*0.6
-    fill $color-chart-meta
+    font-family $logo-nexo
+    font-size $em_size*4
+    fill $color-chart-gridline
+    
     //text
       //dominant-baseline central
     &.left
@@ -125,8 +131,9 @@ svg
       text-anchor end
   &.svg-text-title
     fill $color-body-text
-    font-family $font-sans
+    font-family $font-sans-bold
     font-size $em_size
+   
 
 .svg-source-pipe
 	stroke $color-chart-meta
@@ -165,7 +172,7 @@ svg
     &.svg-text-source
       font-size $em_size*0.6
     &.svg-text-title
-      font-size $em_size
+      font-size $em_size*1.2
 
 .small
   .em-size

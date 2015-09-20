@@ -50,7 +50,7 @@ var dateParsers = {
 	},
 
 	"yy": function(d) {
-		return "’" + dateParsers.yyyy(d).slice(-2);
+		return dateParsers.yyyy(d).slice(-2);
 	},
 
 	"yyyy": function(d) {

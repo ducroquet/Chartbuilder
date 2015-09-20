@@ -34,7 +34,7 @@ var display = {
 	labelXMargin: "0.6em",
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
-	afterTitle: "1.6em",
+	afterTitle: "3em",
 	afterLegend: "1.6em",
 	blockerRectOffset: "0.3em",
 	columnPaddingCoefficient: 0.3,
@@ -127,9 +127,9 @@ var defaultProps = {
 	 */
 	metadata: {
 		chartType: 'xy',
-		title: "",
-		source: "",
-		credit: "Made with Chartbuilder",
+		title: "TÍTULO DO GRÁFICO",
+		source: "a",
+		credit: "Fonte:",
 		size: "auto"
 	}
 };
