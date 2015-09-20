@@ -96,6 +96,10 @@ var ChartGridXY = React.createClass({
 			extraPadding.top = extraPadding.top + displayConfig.afterTitle;
 		}
 
+		if (this.props.hasLinhafina) {
+			extraPadding.top = extraPadding.top + displayConfig.afterTitle;
+		}
+
 		/* Divide total width by number of grids, also subtracting the spade to be
 		* used to the right of a chart */
 		var dimensionsPerGrid = {

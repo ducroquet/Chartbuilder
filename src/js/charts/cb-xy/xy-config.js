@@ -128,6 +128,7 @@ var defaultProps = {
 	metadata: {
 		chartType: 'xy',
 		title: "TÍTULO DO GRÁFICO",
+		linhafina: "Linha fina",
 		source: "a",
 		credit: "Fonte:",
 		size: "auto"

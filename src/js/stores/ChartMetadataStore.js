@@ -84,6 +84,7 @@ function registeredCallback(payload) {
 			_metadata = action.model.metadata;
 			data = ChartPropertiesStore.get("data");
 			_metadata.title = defaultTitle(data);
+			_metadata.linhafina = defaultLinhafina(data);
 			ChartMetadataStore.emitChange();
 			break;
 
@@ -102,6 +103,7 @@ function registeredCallback(payload) {
 			if (!titleDirty) {
 				data = ChartPropertiesStore.get("data");
 				_metadata.title = defaultTitle(data);
+				_metadata.linhafina = defaultLinhafina(data);
 				ChartMetadataStore.emitChange();
 			}
 			break;
@@ -123,6 +125,15 @@ function defaultTitle(data) {
 		return data[0].name;
 	} else {
 		return _metadata.title;
+	}
+}
+
+
+function defaultLinhafina(data) {
+	if (data.length === 1 && _metadata.title === "") {
+		return data[0].name;
+	} else {
+		return _metadata.linhafina;
 	}
 }
 

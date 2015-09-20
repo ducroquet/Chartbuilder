@@ -132,6 +132,7 @@ var XYRenderer = React.createClass({
 		// margin set in config
 		var labels = _chartProps._annotations.labels;
 		var hasTitle = (this.props.metadata.title.length > 0 && this.props.showMetadata);
+		var hasLinhafina = (this.props.metadata.linhafina.length > 0 && this.props.showMetadata);
 
 		// compute the max tick width for each scale
 		each(scaleNames, function(scaleKey) {
@@ -192,6 +193,7 @@ var XYRenderer = React.createClass({
 					key="xy-chart"
 					chartProps={_chartProps}
 					hasTitle={hasTitle}
+					hasLinhafina={hasLinhafina}
 					displayConfig={this.props.displayConfig}
 					styleConfig={this.props.styleConfig}
 					data={dataWithSettings}
@@ -211,6 +213,7 @@ var XYRenderer = React.createClass({
 					chartAreaDimensions={chartAreaDimensions}
 					data={dataWithSettings}
 					hasTitle={hasTitle}
+					hasLinhafina={hasLinhafina}
 					scale={scale}
 					editable={this.props.editable}
 					maxTickWidth={this.state.maxTickWidth}
@@ -253,6 +256,7 @@ var XYChart = React.createClass({
 	propTypes: {
 		chartProps: PropTypes.object.isRequired,
 		hasTitle: PropTypes.bool.isRequired,
+		hasLinhafina: PropTypes.bool.isRequired,
 		displayConfig: PropTypes.object.isRequired,
 		styleConfig: PropTypes.object.isRequired,
 		data: PropTypes.arrayOf(PropTypes.object).isRequired,

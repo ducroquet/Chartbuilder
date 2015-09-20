@@ -280,6 +280,19 @@ var RendererWrapper = React.createClass({
 				metadataSvg.push(title);
 			}
 
+			if (metadata.linhafina && metadata.linhafina !== "") {
+				linhafina = (
+					<SvgText
+						text={metadata.linhafina}
+						key="linhafina"
+						translate={[translate.left, translate.top]}
+						align="top"
+						className="svg-text-linhafina"
+					/>
+				);
+				metadataSvg.push(linhafina);
+			}
+
 			metadataSvg.push(
 				<ChartFooter
 					metadata={metadata}

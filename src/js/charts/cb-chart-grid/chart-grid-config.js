@@ -111,6 +111,7 @@ var defaultProps = {
 		id: null,
 		chartType: "chartgrid",
 		title: "TÍTULO DO GRÁFICO",
+		linhafina: "Linha fina",
 		source: "",
 		credit: "Fonte:",
 		size: "auto"

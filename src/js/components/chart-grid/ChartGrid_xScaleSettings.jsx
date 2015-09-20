@@ -147,6 +147,49 @@ var ChartGrid_xScaleSettings = React.createClass({
 				/>
 			</div>
 		);
+
+		var linhafina_block = (
+				<h2 className="scale-option-linhafina">
+					<span className="step-number">{this.props.stepNumber}</span>
+					Set the units, max, and min of the {this.props.axis} axis
+				</h2>
+				)
+
+		if(this.props.stepNumber == "") {
+			title_block = (
+				<h2 className="scale-option-linhafina">
+					Set the units, max, and min of the {this.props.axis} axis
+				</h2>
+				)
+		}
+
+		return (
+			<div className={this.props.className}>
+				{linhafina_block}
+				<TextInput
+					className="scale-option"
+					onChange={this._handleScaleUpdate.bind(null, "prefix")}
+					value={currScale.prefix}
+					placeholder="Prefix"
+				/>
+				<TextInput
+					id="suffix"
+					className="scale-option"
+					onChange={this._handleScaleUpdate.bind(null, "suffix")}
+					placeholder="Suffix"
+					value={currScale.suffix}
+				/>
+				<div className="scale-tangle-inputs">
+					{tangleInputs}
+				</div>
+				<ScaleReset
+					scale={this.props.scale}
+					onUpdate={this.props.onUpdate}
+					scaleId={"primaryScale"}
+					className="scale-reset"
+				/>
+			</div>
+		);
 	}
 });
 
