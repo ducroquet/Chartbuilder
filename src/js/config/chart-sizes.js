@@ -6,7 +6,7 @@
  */
 var chart_sizes = {
 	medium: {
-		width: 640,
+		width: 563,
 		height: 390
 	},
 	spotLong: {
