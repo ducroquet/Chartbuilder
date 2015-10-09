@@ -41,8 +41,13 @@ var chart_sizes = [
 
 var text_input_values = [
 	{ name: "title", content: "Title" },
-	{ name: "credit", content: "Credit" },
-	{ name: "source", content: "Source" }
+	{ name: "linhafina", content: "Linha Fina" },
+	{ name: "credit", content: "Fonte" },
+	
+	/**
+	* Retirado para que ninguém possa alterar a assinatura do nexo
+	*{ name: "source", content: "Source" }
+	*/
 ];
 
 /**
@@ -63,7 +68,8 @@ var ChartMetadata = React.createClass({
 			size: PropTypes.string.isRequired,
 			source: PropTypes.string,
 			credit: PropTypes.string,
-			title: PropTypes.string
+			title: PropTypes.string,
+			linhafina: PropTypes.string
 		}),
 		stepNumber: PropTypes.string,
 		additionalComponents: PropTypes.array
