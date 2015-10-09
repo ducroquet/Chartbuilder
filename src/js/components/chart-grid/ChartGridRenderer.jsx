@@ -73,7 +73,6 @@ var ChartGridRenderer = React.createClass({
 
 		/* Pass a boolean that detects whether there is a title */
 		var hasTitle = (this.props.metadata.title.length > 0 && this.props.showMetadata);
-		var hasLinhafina = (this.props.metadata.linhafina.length > 0 && this.props.showMetadata);
 
 		/* Choose between grid of bars and grid of XY, and transfer all props to
 		 * relevant component
@@ -84,7 +83,6 @@ var ChartGridRenderer = React.createClass({
 					{...this.props}
 					scale={scale}
 					hasTitle={hasTitle}
-					hasLinhafina={hasLinhafina}
 				/>
 			);
 		} else {
@@ -93,7 +91,6 @@ var ChartGridRenderer = React.createClass({
 					{...this.props}
 					scale={scale}
 					hasTitle={hasTitle}
-					hasLinhafina={hasLinhafina}
 				/>
 			);
 		}

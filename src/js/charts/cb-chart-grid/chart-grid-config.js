@@ -110,10 +110,9 @@ var defaultProps = {
 	metadata: {
 		id: null,
 		chartType: "chartgrid",
-		title: "TÍTULO DO GRÁFICO",
-		linhafina: "Linha fina",
+		title: "",
 		source: "",
-		credit: "Fonte:",
+		credit: "Made with Chartbuilder",
 		size: "auto"
 	}
 };

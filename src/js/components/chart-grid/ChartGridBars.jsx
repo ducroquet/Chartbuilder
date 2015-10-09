@@ -92,12 +92,9 @@ var ChartGridBars = React.createClass({
 		/* Height of each grid block */
 		dimensionsPerGrid.height = (dimensions.height) / chartProps._grid.rows;
 
-		if (this.props.hasTitle && this.props.hasLinhafina) {
-			extraPadding.top = extraPadding.top + displayConfig.afterTitle*3;
-			dimensionsPerGrid.height -= displayConfig.afterTitle;
-		} else if (this.props.hasTitle && this.props.hasLinhafina == false) {
+		if (this.props.hasTitle) {
 			extraPadding.top = extraPadding.top + displayConfig.afterTitle;
-			dimensionsPerGrid.height -= displayConfig.afterTitle;	
+			dimensionsPerGrid.height -= displayConfig.afterTitle;
 		}
 
 

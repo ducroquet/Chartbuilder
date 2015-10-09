@@ -132,7 +132,6 @@ var XYRenderer = React.createClass({
 		// margin set in config
 		var labels = _chartProps._annotations.labels;
 		var hasTitle = (this.props.metadata.title.length > 0 && this.props.showMetadata);
-		var hasLinhafina = (this.props.metadata.linhafina.length > 0 && this.props.showMetadata);
 
 		// compute the max tick width for each scale
 		each(scaleNames, function(scaleKey) {
@@ -193,7 +192,6 @@ var XYRenderer = React.createClass({
 					key="xy-chart"
 					chartProps={_chartProps}
 					hasTitle={hasTitle}
-					hasLinhafina={hasLinhafina}
 					displayConfig={this.props.displayConfig}
 					styleConfig={this.props.styleConfig}
 					data={dataWithSettings}
@@ -213,7 +211,6 @@ var XYRenderer = React.createClass({
 					chartAreaDimensions={chartAreaDimensions}
 					data={dataWithSettings}
 					hasTitle={hasTitle}
-					hasLinhafina={hasLinhafina}
 					scale={scale}
 					editable={this.props.editable}
 					maxTickWidth={this.state.maxTickWidth}
@@ -256,7 +253,6 @@ var XYChart = React.createClass({
 	propTypes: {
 		chartProps: PropTypes.object.isRequired,
 		hasTitle: PropTypes.bool.isRequired,
-		hasLinhafina: PropTypes.bool.isRequired,
 		displayConfig: PropTypes.object.isRequired,
 		styleConfig: PropTypes.object.isRequired,
 		data: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -305,11 +301,8 @@ var XYChart = React.createClass({
 
 	componentWillReceiveProps: function(nextProps) {
 		var yOffset;
-		if (nextProps.hasTitle && nextProps.hasLinhafina) {
-			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle*2;
-		} else if (nextProps.hasTitle && nextProps.hasLinhafina == false) {
+		if (nextProps.hasTitle) {
 			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle;
-
 		} else {
 			yOffset = nextProps.displayConfig.margin.top;
 		}
@@ -417,15 +410,12 @@ var XYLabels = React.createClass({
 		// Determine how far down vertically the labels should be placed, depending
 		// on presence (or not) of a title
 		var yOffset;
-	
-		if (nextProps.hasTitle && nextProps.hasLinhafina) {
-			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle*1.5;
-		} else if (nextProps.hasTitle && nextProps.hasLinhafina == false) {
+		if (nextProps.hasTitle) {
 			yOffset = nextProps.displayConfig.margin.top + nextProps.displayConfig.afterTitle;
-
 		} else {
 			yOffset = nextProps.displayConfig.margin.top;
 		}
+
 		/*
 		* We use this XYLabels component's state to save locations of undragged
 		* labels. Dragged labels are saved to the parent store so that they can be
@@ -839,9 +829,7 @@ function computePadding(props, chartHeight) {
 	var displayConfig = props.displayConfig;
 	var _top = (props.labelYMax * props.chartAreaDimensions.height) + displayConfig.afterLegend;
 
-	if (props.hasTitle && props.hasLinhafina) {
-		_top += displayConfig.afterTitle*1.5;
-	} else if (props.hasTitle && props.hasLinhafina == false) {
+	if (props.hasTitle) {
 		_top += displayConfig.afterTitle;
 	}
 

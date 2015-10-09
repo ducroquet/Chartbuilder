@@ -92,10 +92,7 @@ var ChartGridXY = React.createClass({
 
 		var dimensions = clone(this.props.dimensions);
 
-		if (this.props.hasTitle && this.props.hasLinhafina) {
-			extraPadding.top = extraPadding.top + displayConfig.afterTitle*3;
-
-		} else if (this.props.hasTitle && this.props.hasLinhafina == false) {
+		if (this.props.hasTitle) {
 			extraPadding.top = extraPadding.top + displayConfig.afterTitle;
 		}
 
