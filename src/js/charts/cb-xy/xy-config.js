@@ -128,8 +128,8 @@ var defaultProps = {
 	metadata: {
 		chartType: 'xy',
 		title: "",
-		source: "",
-		credit: "Made with Chartbuilder",
+		source: "a",
+		credit: "Fonte:",
 		size: "auto"
 	}
 };
