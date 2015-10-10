@@ -40,8 +40,7 @@ var chart_sizes = [
 ];
 
 var text_input_values = [
-	{ name: "title", content: "Title" },
-	{ name: "linhafina", content: "Linha Fina" },
+	{ name: "title", content: "Descrição" },
 	{ name: "credit", content: "Fonte" },
 	
 	/**
