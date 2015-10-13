@@ -1,88 +1,88 @@
 [data-color-index="0"] path {
-  stroke: #a50026;
+  stroke: #28c7cb;
 }
 [data-color-index="0"] rect {
-  fill: #a50026;
+  fill: #28c7cb;
 }
 [data-color-index="0"] circle {
-  stroke: #a50026;
+  stroke: #28c7cb;
   stroke-width: 2px;
-  fill: #a50026;
+  fill: #28c7cb;
 }
 .color-index-0 {
-  fill: #a50026;
+  fill: #28c7cb;
 }
 rect[data-color-index="0"] {
-  fill: #a50026;
+  fill: #28c7cb;
 }
 text[data-color-index="0"] {
-  fill: #a50026;
+  fill: #28c7cb;
 }
 .d4 .axis .tick text[data-color-index="0"] {
-  fill: #a50026;
+  fill: #28c7cb;
 }
 .cb-colorpicker-color-0 {
-  background-color: #a50026;
+  background-color: #28c7cb;
 }
 .series-label-0 {
-  color: #a50026;
+  color: #28c7cb;
 }
 .series-label-input-0 {
-  border-bottom: 2px solid #a50026;
+  border-bottom: 2px solid #28c7cb;
 }
 .series-label-input-0:hover,
 .series-label-input-0:focus {
   border: none;
-  border-bottom: 2px solid #a50026;
+  border-bottom: 2px solid #28c7cb;
 }
 .series-label-input-0 input {
-  color: #a50026;
+  color: #28c7cb;
 }
 .cb-toggle.toggled.toggle-0 .cb-toggle-container {
-  background-color: #a50026;
+  background-color: #28c7cb;
 }
 [data-color-index="1"] path {
-  stroke: #fdae61;
+  stroke: #238181;
 }
 [data-color-index="1"] rect {
-  fill: #fdae61;
+  fill: #238181;
 }
 [data-color-index="1"] circle {
-  stroke: #fdae61;
+  stroke: #238181;
   stroke-width: 2px;
-  fill: #fdae61;
+  fill: #238181;
 }
 .color-index-1 {
-  fill: #fdae61;
+  fill: #238181;
 }
 rect[data-color-index="1"] {
-  fill: #fdae61;
+  fill: #238181;
 }
 text[data-color-index="1"] {
-  fill: #fdae61;
+  fill: #238181;
 }
 .d4 .axis .tick text[data-color-index="1"] {
-  fill: #fdae61;
+  fill: #238181;
 }
 .cb-colorpicker-color-1 {
-  background-color: #fdae61;
+  background-color: #238181;
 }
 .series-label-1 {
-  color: #fdae61;
+  color: #238181;
 }
 .series-label-input-1 {
-  border-bottom: 2px solid #fdae61;
+  border-bottom: 2px solid #238181;
 }
 .series-label-input-1:hover,
 .series-label-input-1:focus {
   border: none;
-  border-bottom: 2px solid #fdae61;
+  border-bottom: 2px solid #238181;
 }
 .series-label-input-1 input {
-  color: #fdae61;
+  color: #238181;
 }
 .cb-toggle.toggled.toggle-1 .cb-toggle-container {
-  background-color: #fdae61;
+  background-color: #238181;
 }
 [data-color-index="2"] path {
   stroke: #d73027;
@@ -482,7 +482,7 @@ span.step-number {
   margin-right: 0.25em;
 }
 .editor-options {
-  font-family: 'Khula-Regular', Arial, Helvetica, sans-serif;
+  font-family: 'Gotham-Medium', Arial, Helvetica, sans-serif;
   margin: 30px 0;
   display: block;
   width: 100%;
@@ -492,12 +492,42 @@ span.step-number {
 }
 .data-input {
   font-size: 1em;
-  border: 1px solid #e2e2e2;
   margin: 0;
+  position: relative;
 }
 .data-input textarea {
   font-family: Monaco, Lucida Console, monspace;
   height: 12em;
+}
+.data-input input[type="file"] {
+  pointer-events: none;
+  height: 12em;
+  position: relative;
+  opacity: 1;
+  z-index: -1;
+}
+.data-input .file-drop {
+  pointer-events: none;
+  height: 12em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: #f1f1f1;
+  width: 100%;
+  text-align: center;
+  font-family: 'Gotham-Medium', Arial, Helvetica, sans-serif;
+}
+.data-input .file-drop p {
+  font-size: 2em;
+  margin-top: 2em;
+}
+.data-input.dropping input[type="file"] {
+  pointer-events: all;
+  z-index: 1;
+}
+.data-input.dropping .file-drop {
+  z-index: 2;
 }
 .data-input .cb-alert {
   font-size: 1.2em;
@@ -650,7 +680,7 @@ span.step-number {
 }
 .editor-label {
   font-size: 18px;
-  font-family: 'Khula-Regular', Arial, Helvetica, sans-serif;
+  font-family: 'Gotham-Medium', Arial, Helvetica, sans-serif;
 }
 .load-localstorage {
   display: none;
@@ -724,7 +754,7 @@ span.step-number {
   width: 98%;
 }
 .mobile-overrides> h2:first-child {
-  font-family: "Khula-Bold", Arial, sans-serif;
+  font-family: 'Gotham-Bold', Arial, sans-serif;
   margin-bottom: 1em;
 }
 .mobile-overrides .scale-options {
@@ -752,7 +782,7 @@ div.renderer-wrapper {
 }
 svg.renderer-svg {
   fill: #fff;
-  font-family: 'Khula-Light', Arial, Helvetica, sans-serif;
+  font-family: 'Gotham-Light', Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
 }
@@ -767,15 +797,16 @@ svg.renderer-svg tspan {
   font-size: 20px;
 }
 .d4 .axis .tick {
-  font-family: 'Khula-Light', Arial, Helvetica, sans-serif;
+  font-family: 'GothamDecimal', Arial;
 }
 .d4 .axis .tick[data-anchor="middle"] text {
   text-anchor: middle;
 }
 .d4 .axis .tick text {
-  fill: #666;
+  fill: #cbcbcb;
   shape-rendering: crispEdges;
   text-anchor: middle;
+  font-size: 18px;
 }
 .d4 .axis .tick:first-child text {
   text-anchor: middle;
@@ -800,16 +831,18 @@ svg.renderer-svg tspan {
   text-anchor: end;
 }
 .d4 .axis[data-scale="time"] .tick:not([data-anchor="middle"]) text {
-  text-anchor: start;
+  text-anchor: middle;
+  fill: #000;
 }
 .d4 .axis[data-scale="time"] .tick:first-child text {
-  text-anchor: start;
+  text-anchor: middle;
+  fill: #000;
 }
 .d4 .concealer-label {
-  font-family: 'Khula-Light', Arial, Helvetica, sans-serif;
+  font-family: 'GothamDecimal', Arial;
 }
 .d4 .concealer-label text {
-  fill: #666;
+  fill: #000;
 }
 .d4 .concealer-label rect {
   fill: #fff;
@@ -830,39 +863,42 @@ svg.renderer-svg tspan {
   stroke-linejoin: round;
 }
 .d4 .margins .label {
-  font-family: 'Khula-Light', Arial, Helvetica, sans-serif;
+  font-family: 'Gotham-Light', Arial, Helvetica, sans-serif;
 }
 .d4 .column-label {
-  fill: #666;
+  fill: #cbcbcb;
 }
 .d4 line.no-label-tick {
   fill: none;
   stroke: #ddd;
-  stroke-width: 1px;
+  stroke-width: px;
   shape-rendering: crispEdges;
 }
-.svg-text {
-  font-family: 'Khula-Light', Arial, Helvetica, sans-serif;
-  font-size: 20px;
-}
 .svg-text.svg-text-credit {
+  font-family: 'Gotham-Light', Arial, Helvetica, sans-serif;
   font-size: 12px;
-  fill: #ccc;
+  fill: #000;
   text-anchor: start;
 }
 .svg-text.svg-text-source {
-  font-size: 12px;
-  fill: #ccc;
+  font-family: 'NexoJornal';
+  font-size: 80px;
+  fill: #ddd;
 }
-.svg-text.left {
+.svg-text.svg-text-source.left {
   text-anchor: start;
 }
-.svg-text.right {
+.svg-text.svg-text-source.right {
   text-anchor: end;
 }
-.svg-text-title {
-  fill: #666;
-  font-family: 'Khula-Regular', Arial, Helvetica, sans-serif;
+.svg-text.svg-text-title {
+  fill: #000;
+  font-family: 'Gotham-Light', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.svg-text.svg-text-linhafina {
+  fill: #000;
+  font-family: 'Gotham-Light', Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 .svg-source-pipe {
@@ -872,7 +908,7 @@ svg.renderer-svg tspan {
 }
 .svg-label-text {
   font-size: 20px;
-  font-family: 'Khula-Light', Arial, Helvetica, sans-serif;
+  font-family: 'Gotham-Medium', Arial, Helvetica, sans-serif;
   cursor: move;
 }
 .crosshair line {
@@ -900,10 +936,10 @@ svg.renderer-svg tspan {
   font-size: 12px;
 }
 .medium .svg-text.svg-text-source {
-  font-size: 12px;
+  font-size: 120px;
 }
 .medium .svg-text.svg-text-title {
-  font-size: 20px;
+  font-size: 24px;
 }
 .small .em-size {
   font-size: 14px;
